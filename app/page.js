@@ -1,68 +1,100 @@
-import Image from "next/image";
+"use client";
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import SkillsSection from "./components/Skills";
+import Portfolio from "./components/Portfolio";
+import ExperienceEducation from "./components/ExperienceEducation";
+import Services from "./components/Services";
+import ContactSection from "./components/Contact";
+import WelcomeAnimation from "./components/WelcomeAnimation";
+import Wave from "./components/Wave";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="bg-transparent min-h-screen text-white selection:bg-indigo-500/30 selection:text-indigo-200">
+      <AnimatePresence mode="wait">
+        {loading && (
+          <WelcomeAnimation
+            key="welcome-intro"
+            onComplete={() => setLoading(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <main className="relative z-10">
+        <Navbar />
+
+        {/* 1. Hero Section (#0a0e1f - Deep Obsidian Midnight) */}
+        <Hero />
+
+        {/* Wave: Hero (#0a0e1f) -> About (#0e0c24) */}
+        <Wave
+          fill="#0e0c24"
+          stroke="rgba(129, 140, 248, 0.75)"
+          className="bg-[#0a0e1f]"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+        {/* 2. About Section (#0e0c24 - Twilight Royal Purple) */}
+        <About />
+
+        {/* Wave: About (#0e0c24) -> Skills (#091426) */}
+        <Wave
+          fill="#091426"
+          stroke="rgba(56, 189, 248, 0.75)"
+          flip
+          className="bg-[#0e0c24]"
+        />
+
+        {/* 3. Skills Section (#091426 - Cyber Oceanic Slate) */}
+        <SkillsSection />
+
+        {/* Wave: Skills (#091426) -> Experience (#150f28) */}
+        <Wave
+          fill="#150f28"
+          stroke="rgba(168, 85, 247, 0.75)"
+          className="bg-[#091426]"
+        />
+
+        {/* 4. Experience & Education Section (#150f28 - Obsidian Amethyst) */}
+        <ExperienceEducation />
+
+        {/* Wave: Experience (#150f28) -> Portfolio (#071322) */}
+        <Wave
+          fill="#071322"
+          stroke="rgba(14, 165, 233, 0.75)"
+          flip
+          className="bg-[#150f28]"
+        />
+
+        {/* 5. Portfolio Section (#071322 - Deep Midnight Sapphire) */}
+        <Portfolio />
+
+        {/* Wave: Portfolio (#071322) -> Services (#100d2b) */}
+        <Wave
+          fill="#100d2b"
+          stroke="rgba(99, 102, 241, 0.75)"
+          className="bg-[#071322]"
+        />
+
+        {/* 6. Services Section (#100d2b - Deep Cosmic Indigo) */}
+        <Services />
+
+        {/* Wave: Services (#100d2b) -> Contact (#070914) */}
+        <Wave
+          fill="#070914"
+          stroke="rgba(192, 132, 252, 0.75)"
+          flip
+          className="bg-[#100d2b]"
+        />
+
+        {/* 7. Contact Section (#070914 - Space Obsidian) */}
+        <ContactSection />
       </main>
     </div>
   );

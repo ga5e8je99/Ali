@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ali Saad — Portfolio & Interactive Platform 🚀
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-16.4.5-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)](https://react.dev/)
+[![FastAPI & Automation](https://img.shields.io/badge/Stack-Python%20%7C%20FastAPI%20%7C%20Rust%20%7C%20Playwright-6366f1?style=for-the-badge)](https://github.com/expher510)
 
-First, run the development server:
+A high-performance, bilingual (Arabic / English) personal portfolio and showcase platform engineered for **Ali Saad**, Back-End & Automation Engineer.
 
+---
+
+## ✨ Features
+
+- **🌐 Full Bilingual Support (AR / EN)**: Real-time language switcher with complete RTL (Right-to-Left) and LTR layout adaptability.
+- **🎨 Modern Obsidian & Cyber Indigo Theme**: Crafted with dark midnight tones (`#070914`, `#0a0e1f`, `#0e0c24`, `#150f28`), glowing electric indigo accents, and organic wave transitions.
+- **✍️ Interactive Handwriting Welcome**: Canvas-based cursive signature animation on initial page load.
+- **📅 Interactive Booking System**: Integrated Material-UI Date & Time picker for scheduling consultations directly via WhatsApp & Google Calendar.
+- **💼 Comprehensive Project Case Studies**: Individual project detail pages (`/projects/[id]`) with problem, solution, architecture, and live repository links.
+- **⚡ Next.js 16 App Router & Turbopack**: Blazing-fast static site generation (SSG) with optimized image delivery and zero layout shift.
+- **📬 Contact & Messaging APIs**: Serverless API routes (`/api/messages`, `/api/bookings`, `/api/data`) with local persistent state.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router, Turbopack)
+- **Styling**: Tailwind CSS, CSS Custom Properties
+- **Animations**: Framer Motion
+- **UI Components**: MUI Material & X Date Pickers (Custom themed)
+- **Icons**: React Icons (FontAwesome 6, Simple Icons)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+Ensure you have Node.js 18+ installed.
+
+### 2. Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/ga5e8je99/Ali.git
+cd Ali
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Development Server
+Run the local development server:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 4. Production Build
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💻 About Ali Saad
+- **GitHub**: [@expher510](https://github.com/expher510)
+- **LinkedIn**: [Ali Saad](https://www.linkedin.com/in/ali-saad-b17941401/)
+- **Specialty**: Back-End Architecture, Python/FastAPI Microservices, Playwright Automation, and n8n Workflow Pipelines.
